@@ -1,0 +1,34 @@
+# Sweep config for the 2026-05-17 run.
+#
+# Models tested:
+#   - DeepSeek V4 Flash / V4 Pro via the direct DeepSeek API
+#   - Claude Opus 4.7 / Sonnet 4.6 via OpenRouter
+#     (no direct Anthropic key was available at run time)
+#
+# N values: [10, 50, 100, 200, 500, 1000]
+# Trials: 3 for the cheaper models, 2 for Opus (cost control).
+# Spend cap: $10 hard.
+defaults:
+  timeout: 120.0
+  relevant_position: first
+
+runs:
+  - provider: deepseek
+    model: deepseek-v4-flash
+    n: [10, 50, 100, 200, 500, 1000]
+    trials: 3
+
+  - provider: deepseek
+    model: deepseek-v4-pro
+    n: [10, 50, 100, 200, 500, 1000]
+    trials: 3
+
+  - provider: openrouter
+    model: anthropic/claude-sonnet-4.6
+    n: [10, 50, 100, 200, 500, 1000]
+    trials: 3
+
+  - provider: openrouter
+    model: anthropic/claude-opus-4.7
+    n: [10, 50, 100, 200, 500, 1000]
+    trials: 2

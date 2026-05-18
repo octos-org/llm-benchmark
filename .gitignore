@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Ad-hoc run artifacts at the project root (results/ subdir is checked in)
+/results-*.jsonl
+/results-*.summary.json
+results/bench.log
+
+# Secrets and per-user env
+.env
+.env.*
+*.local
+
+# Virtualenvs
+venv/
+.venv/
+env/
+
+# Editor / OS junk
+.idea/
+.vscode/
+.DS_Store
