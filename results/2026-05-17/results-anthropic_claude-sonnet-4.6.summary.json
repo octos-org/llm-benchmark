@@ -1,0 +1,140 @@
+[
+  {
+    "trials": 3,
+    "ttft_median_ms": 674.8025419656187,
+    "ttft_p95_ms": 1267.383316787891,
+    "ttft_min_ms": 567.2886250540614,
+    "ttft_max_ms": 1333.225625101477,
+    "total_median_ms": 1822.1376249566674,
+    "total_p95_ms": 1977.2373620420694,
+    "total_min_ms": 1372.3894169088453,
+    "total_max_ms": 1994.4706661626697,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "anthropic/claude-sonnet-4.6",
+    "n_tools": 10
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 1346.6284580063075,
+    "ttft_p95_ms": 1610.4780450696126,
+    "ttft_min_ms": 825.0308751594275,
+    "ttft_max_ms": 1639.7946658544242,
+    "total_median_ms": 2045.8882909733802,
+    "total_p95_ms": 2391.5768284583464,
+    "total_min_ms": 1600.6960000377148,
+    "total_max_ms": 2429.986665956676,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "anthropic/claude-sonnet-4.6",
+    "n_tools": 50
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 1997.4129169713706,
+    "ttft_p95_ms": 2597.4925296148285,
+    "ttft_min_ms": 1312.9645001608878,
+    "ttft_max_ms": 2664.1680421307683,
+    "total_median_ms": 2738.5712498798966,
+    "total_p95_ms": 3330.860387906432,
+    "total_min_ms": 2037.4829170759767,
+    "total_max_ms": 3396.6702921316028,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "anthropic/claude-sonnet-4.6",
+    "n_tools": 100
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 1854.6733749099076,
+    "ttft_p95_ms": 3252.2993499878794,
+    "ttft_min_ms": 1513.6819169856608,
+    "ttft_max_ms": 3407.591124996543,
+    "total_median_ms": 2576.4510419685394,
+    "total_p95_ms": 4061.984591721557,
+    "total_min_ms": 2327.0815829746425,
+    "total_max_ms": 4227.043875027448,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "anthropic/claude-sonnet-4.6",
+    "n_tools": 200
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 2606.9092079997063,
+    "ttft_p95_ms": 2612.7424453618005,
+    "ttft_min_ms": 2178.108708001673,
+    "ttft_max_ms": 2613.3905828464776,
+    "total_median_ms": 2612.5662501435727,
+    "total_p95_ms": 2695.8211998920888,
+    "total_min_ms": 2264.690666925162,
+    "total_max_ms": 2705.071749864146,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "anthropic/claude-sonnet-4.6",
+    "n_tools": 500
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 2803.6093751434237,
+    "ttft_p95_ms": 3243.002837128006,
+    "ttft_min_ms": 1595.2875001821667,
+    "ttft_max_ms": 3291.8243329040706,
+    "total_median_ms": 3224.386207992211,
+    "total_p95_ms": 3568.4379460755736,
+    "total_min_ms": 1951.8121660221368,
+    "total_max_ms": 3606.665916973725,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "anthropic/claude-sonnet-4.6",
+    "n_tools": 1000
+  }
+]

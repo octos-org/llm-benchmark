@@ -1,0 +1,140 @@
+[
+  {
+    "trials": 3,
+    "ttft_median_ms": 439.49158303439617,
+    "ttft_p95_ms": 462.6414207974449,
+    "ttft_min_ms": 419.7327501606196,
+    "ttft_max_ms": 465.2136249933392,
+    "total_median_ms": 1439.364582998678,
+    "total_p95_ms": 1582.4612459400669,
+    "total_min_ms": 1136.0019580461085,
+    "total_max_ms": 1598.3608751557767,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-flash",
+    "n_tools": 10
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 652.0738748367876,
+    "ttft_p95_ms": 653.1654255697504,
+    "ttft_min_ms": 575.4545829258859,
+    "ttft_max_ms": 653.286708984524,
+    "total_median_ms": 1657.1186669170856,
+    "total_p95_ms": 1759.1456287307665,
+    "total_min_ms": 1632.3164999485016,
+    "total_max_ms": 1770.4819578211755,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-flash",
+    "n_tools": 50
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 490.4673749115318,
+    "ttft_p95_ms": 633.3193501923233,
+    "ttft_min_ms": 457.0736661553383,
+    "ttft_max_ms": 649.191791890189,
+    "total_median_ms": 1513.2037501316518,
+    "total_p95_ms": 1771.7932124622166,
+    "total_min_ms": 1505.2747919689864,
+    "total_max_ms": 1800.5253749433905,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-flash",
+    "n_tools": 100
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 634.7745000384748,
+    "ttft_p95_ms": 674.9161874409765,
+    "ttft_min_ms": 580.5407499428838,
+    "ttft_max_ms": 679.3763749301434,
+    "total_median_ms": 1753.463750006631,
+    "total_p95_ms": 1759.1965627390891,
+    "total_min_ms": 1563.1470000371337,
+    "total_max_ms": 1759.8335419315845,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-flash",
+    "n_tools": 200
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 827.9313750099391,
+    "ttft_p95_ms": 918.440924398601,
+    "ttft_min_ms": 737.7548338845372,
+    "ttft_max_ms": 928.4975409973413,
+    "total_median_ms": 1776.3375418726355,
+    "total_p95_ms": 2319.4772289600223,
+    "total_min_ms": 1762.6266251318157,
+    "total_max_ms": 2379.826083080843,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-flash",
+    "n_tools": 500
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 1007.9888340551406,
+    "ttft_p95_ms": 1060.9673707513139,
+    "ttft_min_ms": 973.8605411257595,
+    "ttft_max_ms": 1066.8538748286664,
+    "total_median_ms": 2183.84504201822,
+    "total_p95_ms": 3256.66555382777,
+    "total_min_ms": 2179.107208037749,
+    "total_max_ms": 3375.86783291772,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-flash",
+    "n_tools": 1000
+  }
+]

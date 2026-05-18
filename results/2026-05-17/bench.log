@@ -1,0 +1,109 @@
+[bench] >>> provider=deepseek model=deepseek-v4-flash N=[10, 50, 100, 200, 500, 1000] trials=3 timeout=120.0s
+[bench]   deepseek-v4-flash N=10 trial=1/3 ... PASS ttft=420 total=1136ms tokens=1112/83 tool=get_weather
+[bench]   deepseek-v4-flash N=10 trial=2/3 ... PASS ttft=439 total=1439ms tokens=1112/83 tool=get_weather
+[bench]   deepseek-v4-flash N=10 trial=3/3 ... PASS ttft=465 total=1598ms tokens=1112/84 tool=get_weather
+[bench]   => N=10: ttft_med=439.49158303439617 total_med=1439.364582998678 relevant=1.00 any-tool=1.00
+[bench]   deepseek-v4-flash N=50 trial=1/3 ... PASS ttft=653 total=1657ms tokens=4446/84 tool=get_weather
+[bench]   deepseek-v4-flash N=50 trial=2/3 ... PASS ttft=652 total=1770ms tokens=4446/88 tool=get_weather
+[bench]   deepseek-v4-flash N=50 trial=3/3 ... PASS ttft=575 total=1632ms tokens=4446/83 tool=get_weather
+[bench]   => N=50: ttft_med=652.0738748367876 total_med=1657.1186669170856 relevant=1.00 any-tool=1.00
+[bench]   deepseek-v4-flash N=100 trial=1/3 ... PASS ttft=649 total=1801ms tokens=8342/84 tool=get_weather
+[bench]   deepseek-v4-flash N=100 trial=2/3 ... PASS ttft=457 total=1513ms tokens=8342/85 tool=get_weather
+[bench]   deepseek-v4-flash N=100 trial=3/3 ... PASS ttft=490 total=1505ms tokens=8342/84 tool=get_weather
+[bench]   => N=100: ttft_med=490.4673749115318 total_med=1513.2037501316518 relevant=1.00 any-tool=1.00
+[bench]   deepseek-v4-flash N=200 trial=1/3 ... PASS ttft=635 total=1753ms tokens=15992/84 tool=get_weather
+[bench]   deepseek-v4-flash N=200 trial=2/3 ... PASS ttft=581 total=1760ms tokens=15992/84 tool=get_weather
+[bench]   deepseek-v4-flash N=200 trial=3/3 ... PASS ttft=679 total=1563ms tokens=15992/84 tool=get_weather
+[bench]   => N=200: ttft_med=634.7745000384748 total_med=1753.463750006631 relevant=1.00 any-tool=1.00
+[bench]   deepseek-v4-flash N=500 trial=1/3 ... PASS ttft=828 total=2380ms tokens=38885/83 tool=get_weather
+[bench]   deepseek-v4-flash N=500 trial=2/3 ... PASS ttft=928 total=1763ms tokens=38885/85 tool=get_weather
+[bench]   deepseek-v4-flash N=500 trial=3/3 ... PASS ttft=738 total=1776ms tokens=38885/83 tool=get_weather
+[bench]   => N=500: ttft_med=827.9313750099391 total_med=1776.3375418726355 relevant=1.00 any-tool=1.00
+[bench]   deepseek-v4-flash N=1000 trial=1/3 ... PASS ttft=1067 total=3376ms tokens=77545/83 tool=get_weather
+[bench]   deepseek-v4-flash N=1000 trial=2/3 ... PASS ttft=974 total=2179ms tokens=77545/84 tool=get_weather
+[bench]   deepseek-v4-flash N=1000 trial=3/3 ... PASS ttft=1008 total=2184ms tokens=77545/85 tool=get_weather
+[bench]   => N=1000: ttft_med=1007.9888340551406 total_med=2183.84504201822 relevant=1.00 any-tool=1.00
+[bench] summary -> results/results-deepseek-v4-flash.summary.json
+[bench] estimated spend for deepseek-v4-flash: $0.0324
+[bench] === running spend: $0.0324 (cap $10.0) ===
+[bench] >>> provider=deepseek model=deepseek-v4-pro N=[10, 50, 100, 200, 500, 1000] trials=3 timeout=120.0s
+[bench]   deepseek-v4-pro N=10 trial=1/3 ... PASS ttft=448 total=4124ms tokens=1112/91 tool=get_weather
+[bench]   deepseek-v4-pro N=10 trial=2/3 ... PASS ttft=386 total=3411ms tokens=1112/67 tool=get_weather
+[bench]   deepseek-v4-pro N=10 trial=3/3 ... PASS ttft=468 total=4711ms tokens=1112/103 tool=get_weather
+[bench]   => N=10: ttft_med=447.5461251568049 total_med=4123.8350830972195 relevant=1.00 any-tool=1.00
+[bench]   deepseek-v4-pro N=50 trial=1/3 ... PASS ttft=625 total=4799ms tokens=4446/97 tool=get_weather
+[bench]   deepseek-v4-pro N=50 trial=2/3 ... PASS ttft=674 total=4570ms tokens=4446/91 tool=get_weather
+[bench]   deepseek-v4-pro N=50 trial=3/3 ... PASS ttft=655 total=3975ms tokens=4446/72 tool=get_weather
+[bench]   => N=50: ttft_med=654.5234590303153 total_med=4570.207958109677 relevant=1.00 any-tool=1.00
+[bench]   deepseek-v4-pro N=100 trial=1/3 ... PASS ttft=600 total=4447ms tokens=8342/75 tool=get_weather
+[bench]   deepseek-v4-pro N=100 trial=2/3 ... PASS ttft=495 total=4215ms tokens=8342/80 tool=get_weather
+[bench]   deepseek-v4-pro N=100 trial=3/3 ... PASS ttft=503 total=4559ms tokens=8342/96 tool=get_weather
+[bench]   => N=100: ttft_med=502.9887920245528 total_med=4446.950917132199 relevant=1.00 any-tool=1.00
+[bench]   deepseek-v4-pro N=200 trial=1/3 ... PASS ttft=682 total=6968ms tokens=15992/96 tool=get_weather
+[bench]   deepseek-v4-pro N=200 trial=2/3 ... PASS ttft=588 total=4864ms tokens=15992/99 tool=get_weather
+[bench]   deepseek-v4-pro N=200 trial=3/3 ... PASS ttft=651 total=4530ms tokens=15992/94 tool=get_weather
+[bench]   => N=200: ttft_med=650.9591250214726 total_med=4863.6822500266135 relevant=1.00 any-tool=1.00
+[bench]   deepseek-v4-pro N=500 trial=1/3 ... ERR(RemoteProtocolError: peer closed connection without sending ) ttft=698 total=3854ms tokens=-/- tool=-
+[bench]   deepseek-v4-pro N=500 trial=2/3 ... ERR(timeout: ReadTimeout('The read operation timed out')) ttft=1098 total=124358ms tokens=-/- tool=get_weather
+[bench]   deepseek-v4-pro N=500 trial=3/3 ... PASS ttft=809 total=4791ms tokens=38885/90 tool=get_weather
+[bench]   => N=500: ttft_med=808.768416987732 total_med=4790.802541887388 relevant=0.67 any-tool=0.67
+[bench]   deepseek-v4-pro N=1000 trial=1/3 ... PASS ttft=1044 total=8141ms tokens=77545/96 tool=get_weather
+[bench]   deepseek-v4-pro N=1000 trial=2/3 ... PASS ttft=1213 total=4593ms tokens=77545/75 tool=get_weather
+[bench]   deepseek-v4-pro N=1000 trial=3/3 ... PASS ttft=1050 total=4995ms tokens=77545/99 tool=get_weather
+[bench]   => N=1000: ttft_med=1049.5242078322917 total_med=4994.85829193145 relevant=1.00 any-tool=1.00
+[bench] summary -> results/results-deepseek-v4-pro.summary.json
+[bench] estimated spend for deepseek-v4-pro: $0.2018
+[bench] === running spend: $0.2342 (cap $10.0) ===
+[bench] >>> provider=openrouter model=anthropic/claude-sonnet-4.6 N=[10, 50, 100, 200, 500, 1000] trials=3 timeout=120.0s
+[bench]   anthropic/claude-sonnet-4.6 N=10 trial=1/3 ... PASS ttft=675 total=1822ms tokens=1465/67 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=10 trial=2/3 ... PASS ttft=567 total=1372ms tokens=1465/67 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=10 trial=3/3 ... PASS ttft=1333 total=1994ms tokens=1465/67 tool=get_weather
+[bench]   => N=10: ttft_med=674.8025419656187 total_med=1822.1376249566674 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-sonnet-4.6 N=50 trial=1/3 ... PASS ttft=825 total=1601ms tokens=5117/67 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=50 trial=2/3 ... PASS ttft=1347 total=2046ms tokens=5117/67 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=50 trial=3/3 ... PASS ttft=1640 total=2430ms tokens=5117/67 tool=get_weather
+[bench]   => N=50: ttft_med=1346.6284580063075 total_med=2045.8882909733802 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-sonnet-4.6 N=100 trial=1/3 ... PASS ttft=1997 total=2739ms tokens=9421/67 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=100 trial=2/3 ... PASS ttft=1313 total=2037ms tokens=9421/67 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=100 trial=3/3 ... PASS ttft=2664 total=3397ms tokens=9421/67 tool=get_weather
+[bench]   => N=100: ttft_med=1997.4129169713706 total_med=2738.5712498798966 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-sonnet-4.6 N=200 trial=1/3 ... PASS ttft=3408 total=4227ms tokens=17862/67 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=200 trial=2/3 ... PASS ttft=1855 total=2576ms tokens=17862/67 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=200 trial=3/3 ... PASS ttft=1514 total=2327ms tokens=17862/67 tool=get_weather
+[bench]   => N=200: ttft_med=1854.6733749099076 total_med=2576.4510419685394 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-sonnet-4.6 N=500 trial=1/3 ... PASS ttft=2178 total=2265ms tokens=43205/54 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=500 trial=2/3 ... PASS ttft=2607 total=2613ms tokens=43205/54 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=500 trial=3/3 ... PASS ttft=2613 total=2705ms tokens=43205/54 tool=get_weather
+[bench]   => N=500: ttft_med=2606.9092079997063 total_med=2612.5662501435727 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-sonnet-4.6 N=1000 trial=1/3 ... PASS ttft=3292 total=3607ms tokens=85935/54 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=1000 trial=2/3 ... PASS ttft=2804 total=3224ms tokens=85935/54 tool=get_weather
+[bench]   anthropic/claude-sonnet-4.6 N=1000 trial=3/3 ... PASS ttft=1595 total=1952ms tokens=85935/54 tool=get_weather
+[bench]   => N=1000: ttft_med=2803.6093751434237 total_med=3224.386207992211 relevant=1.00 any-tool=1.00
+[bench] summary -> results/results-anthropic_claude-sonnet-4.6.summary.json
+[bench] estimated spend for anthropic/claude-sonnet-4.6: $1.4840
+[bench] === running spend: $1.7181 (cap $10.0) ===
+[bench] >>> provider=openrouter model=anthropic/claude-opus-4.7 N=[10, 50, 100, 200, 500, 1000] trials=2 timeout=120.0s
+[bench]   anthropic/claude-opus-4.7 N=10 trial=1/2 ... PASS ttft=1472 total=2307ms tokens=1986/86 tool=get_weather
+[bench]   anthropic/claude-opus-4.7 N=10 trial=2/2 ... PASS ttft=1598 total=2414ms tokens=1986/108 tool=get_weather
+[bench]   => N=10: ttft_med=1534.5288959797472 total_med=2360.477499430999 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-opus-4.7 N=50 trial=1/2 ... PASS ttft=2023 total=2261ms tokens=6871/90 tool=get_weather
+[bench]   anthropic/claude-opus-4.7 N=50 trial=2/2 ... PASS ttft=2574 total=3575ms tokens=6871/108 tool=get_weather
+[bench]   => N=50: ttft_med=2298.2844789512455 total_med=2917.968792025931 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-opus-4.7 N=100 trial=1/2 ... PASS ttft=1725 total=2599ms tokens=12778/108 tool=get_weather
+[bench]   anthropic/claude-opus-4.7 N=100 trial=2/2 ... PASS ttft=1920 total=2997ms tokens=12778/108 tool=get_weather
+[bench]   => N=100: ttft_med=1822.3492710385472 total_med=2797.8154169395566 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-opus-4.7 N=200 trial=1/2 ... PASS ttft=5377 total=6942ms tokens=24166/108 tool=get_weather
+[bench]   anthropic/claude-opus-4.7 N=200 trial=2/2 ... PASS ttft=2451 total=3497ms tokens=24166/108 tool=get_weather
+[bench]   => N=200: ttft_med=3913.737937458791 total_med=5219.246583408676 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-opus-4.7 N=500 trial=1/2 ... PASS ttft=2617 total=3315ms tokens=57865/108 tool=get_weather
+[bench]   anthropic/claude-opus-4.7 N=500 trial=2/2 ... PASS ttft=2038 total=3000ms tokens=57865/108 tool=get_weather
+[bench]   => N=500: ttft_med=2327.3631666088477 total_med=3157.383333076723 relevant=1.00 any-tool=1.00
+[bench]   anthropic/claude-opus-4.7 N=1000 trial=1/2 ... PASS ttft=7098 total=8180ms tokens=114859/108 tool=get_weather
+[bench]   anthropic/claude-opus-4.7 N=1000 trial=2/2 ... PASS ttft=4540 total=5010ms tokens=114859/68 tool=get_weather
+[bench]   => N=1000: ttft_med=5818.994686938822 total_med=6595.304249436595 relevant=1.00 any-tool=1.00
+[bench] summary -> results/results-anthropic_claude-opus-4.7.summary.json
+[bench] estimated spend for anthropic/claude-opus-4.7: $6.6470
+[bench] === running spend: $8.3651 (cap $10.0) ===
+[bench] combined CSV -> results/all-trials.csv
+[bench] combined MD  -> results/summary.md
+[bench] total elapsed: 329.8s, total estimated spend: $8.3651

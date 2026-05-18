@@ -1,0 +1,143 @@
+[
+  {
+    "trials": 3,
+    "ttft_median_ms": 447.5461251568049,
+    "ttft_p95_ms": 465.854900656268,
+    "ttft_min_ms": 385.57016709819436,
+    "ttft_max_ms": 467.88920904509723,
+    "total_median_ms": 4123.8350830972195,
+    "total_p95_ms": 4652.262846194208,
+    "total_min_ms": 3411.105833016336,
+    "total_max_ms": 4710.977042093873,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-pro",
+    "n_tools": 10
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 654.5234590303153,
+    "ttft_p95_ms": 672.451982786879,
+    "ttft_min_ms": 625.2560839056969,
+    "ttft_max_ms": 674.4440409820527,
+    "total_median_ms": 4570.207958109677,
+    "total_p95_ms": 4776.403133827262,
+    "total_min_ms": 3975.1520839054137,
+    "total_max_ms": 4799.313708906993,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-pro",
+    "n_tools": 50
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 502.9887920245528,
+    "ttft_p95_ms": 590.3715164400637,
+    "ttft_min_ms": 494.84325014054775,
+    "ttft_max_ms": 600.0807080417871,
+    "total_median_ms": 4446.950917132199,
+    "total_p95_ms": 4547.904104134068,
+    "total_min_ms": 4214.594583027065,
+    "total_max_ms": 4559.121124912053,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-pro",
+    "n_tools": 100
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 650.9591250214726,
+    "ttft_p95_ms": 678.92189999111,
+    "ttft_min_ms": 587.6105409115553,
+    "ttft_max_ms": 682.0288749877363,
+    "total_median_ms": 4863.6822500266135,
+    "total_p95_ms": 6757.888211798854,
+    "total_min_ms": 4529.9432498868555,
+    "total_max_ms": 6968.355540884659,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-pro",
+    "n_tools": 200
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 808.768416987732,
+    "ttft_p95_ms": 1069.1137046786025,
+    "ttft_min_ms": 698.0162090621889,
+    "ttft_max_ms": 1098.040958866477,
+    "total_median_ms": 4790.802541887388,
+    "total_p95_ms": 112401.70392901635,
+    "total_min_ms": 3854.287000140175,
+    "total_max_ms": 124358.47074980848,
+    "relevant_tool_rate": 0.6666666666666666,
+    "any_tool_rate": 0.6666666666666666,
+    "response_start_rate": 1.0,
+    "errors": [
+      "RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)",
+      "timeout: ReadTimeout('The read operation timed out')"
+    ],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-pro",
+    "n_tools": 500
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 1049.5242078322917,
+    "ttft_p95_ms": 1196.7974333558232,
+    "ttft_min_ms": 1043.994541047141,
+    "ttft_max_ms": 1213.16112508066,
+    "total_median_ms": 4994.85829193145,
+    "total_p95_ms": 7826.567066740245,
+    "total_min_ms": 4592.629000078887,
+    "total_max_ms": 8141.201375052333,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "deepseek-v4-pro",
+    "n_tools": 1000
+  }
+]
