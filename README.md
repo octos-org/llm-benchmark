@@ -189,6 +189,55 @@ If the loop recurs, the next experiment to add to this repo is a
 multi-turn mode that replays the failing conversation shape, not more
 N-padding on single-turn requests. Tool count is not the variable.
 
+### Follow-up: replay of the actual failing conversation (2026-05-28)
+
+After the single-turn sweep above ruled out tool-count, we ran two
+follow-up experiments to find the real cause:
+
+1. **Synthetic single-turn termination-signal test** (`scripts/termination_signal_repro.py`):
+   build a 5-message conversation where the user asks "is the deck
+   done?" and the assistant has just received a `check_workspace_contract`
+   result, varying whether the result carries the explicit `all_ready`
+   flag. Kimi and Opus both responded with text 5/5 in every arm. The
+   "missing termination signal" hypothesis we'd started with was
+   refuted.
+
+2. **Full-history replay** (`scripts/termination_signal_replay.py`):
+   load the actual 89-message session JSONL from the failing mini3
+   session up to the user's trigger message ("是你的 manifest 文件
+   生成问题，图片都存在" / "the manifest file is the problem, the
+   images exist"), then ask kimi-k2.5 and claude-opus-4.7 what they do
+   next. Two arms each: only `check_workspace_contract` available vs
+   that tool plus `read_file` and `list_dir`.
+
+| Arm | Result |
+|---|---|
+| A: kimi + `check_only` | **LOOP=3/3** (reproduced production failure) |
+| B: kimi + `check + read_file + list_dir` | LOOP=2/3, OTHER_TOOL=1/3 |
+| C: opus + `check_only` | **LOOP=3/3** (Opus loops too) |
+| D: opus + `check + read_file + list_dir` | LOOP=0/3, OTHER_TOOL=3/3 |
+
+The loop is reproducible at 100% in arms A and C (`check_workspace_contract` is the only relevant tool). The frontier Claude Opus 4.7 model loops just as hard as kimi in that condition — this is not a model-quality issue at the tool-selection layer when no tool can actually answer the user's question.
+
+What broke production was **tool-catalog mismatch**: the user asked
+about manifest content; the only directly-relevant tool answers
+artifact presence. The LLM kept re-querying because no available tool
+could answer what was actually asked. Opus, when given `list_dir` as
+an alternative, switches every time (arm D). Kimi is stickier on its
+first tool choice — it switches 1/3 (arm B).
+
+**The 4 KB tree without `all_ready` was not the cause.** The original
+`check_workspace_contract` answered a different question than the
+user asked. Production already had `read_file` available (tools=44);
+kimi's tool-stickiness kept it locked on the first tool it picked.
+
+The implication for tool design (logged on the octos side for
+follow-up): document what each tool does NOT answer, not just what it
+does, so the LLM has a clearer prior on when to switch.
+
+Trial-level JSONL at [`results/2026-05-28/termination-repro.jsonl`](results/2026-05-28/termination-repro.jsonl)
+and [`results/2026-05-28/termination-replay.jsonl`](results/2026-05-28/termination-replay.jsonl).
+
 ### Cost
 
 Total estimated spend on this run: **$0.00** (autodl's own usage frame
