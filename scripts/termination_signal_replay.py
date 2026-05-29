@@ -62,7 +62,15 @@ TOOL_CHECK_CONTRACT = {
             "exist, and what revision is currently present. The output "
             "includes a top-level `all_ready: bool` — when true, the "
             "deliverable is COMPLETE and you should finish the turn rather "
-            "than re-poll."
+            "than re-poll.\n\n"
+            "DOES NOT answer: whether file CONTENT is correct (manifest "
+            "layout, script.js logic, image quality, text rendering). This "
+            "tool only verifies artifact PRESENCE and validator pass/fail "
+            "— it does not read or interpret file contents. If the user "
+            "asks about file content (`manifest`, `script`, what's INSIDE "
+            "a file, why an image looks wrong, etc.), use `read_file` / "
+            "`list_dir` / `view_image` instead. Re-calling this tool will "
+            "return the same answer."
         ),
         "parameters": {
             "type": "object",
