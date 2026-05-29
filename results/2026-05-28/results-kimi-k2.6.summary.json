@@ -1,0 +1,163 @@
+[
+  {
+    "trials": 3,
+    "ttft_median_ms": 1216.0448753274977,
+    "ttft_p95_ms": 1909.8924500402063,
+    "ttft_min_ms": 1146.7030001804233,
+    "ttft_max_ms": 1986.986625008285,
+    "total_median_ms": 1423.7766251899302,
+    "total_p95_ms": 2165.2796130627394,
+    "total_min_ms": 1405.7195419445634,
+    "total_max_ms": 2247.668833937496,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "kimi-k2.6",
+    "n_tools": 10
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 1361.1227083019912,
+    "ttft_p95_ms": 1365.0564205367118,
+    "ttft_min_ms": 1298.269959166646,
+    "ttft_max_ms": 1365.493499673903,
+    "total_median_ms": 1710.8979169279337,
+    "total_p95_ms": 1805.91800394468,
+    "total_min_ms": 1702.3757919669151,
+    "total_max_ms": 1816.4757913909853,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "kimi-k2.6",
+    "n_tools": 30
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 1565.6340001150966,
+    "ttft_p95_ms": 1575.8768622297794,
+    "ttft_min_ms": 1562.399832997471,
+    "ttft_max_ms": 1577.0149580202997,
+    "total_median_ms": 1905.4455826990306,
+    "total_p95_ms": 1970.3422584570944,
+    "total_min_ms": 1810.7880419120193,
+    "total_max_ms": 1977.5530002079904,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "kimi-k2.6",
+    "n_tools": 44
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 1692.777959164232,
+    "ttft_p95_ms": 2443.3646082878113,
+    "ttft_min_ms": 1439.3659168854356,
+    "ttft_max_ms": 2526.763124857098,
+    "total_median_ms": 2217.6276249811053,
+    "total_p95_ms": 2833.8450249750167,
+    "total_min_ms": 1845.2294575981796,
+    "total_max_ms": 2902.31362497434,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "kimi-k2.6",
+    "n_tools": 50
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 1591.6625000536442,
+    "ttft_p95_ms": 2349.8738379217684,
+    "ttft_min_ms": 1393.5351655818522,
+    "ttft_max_ms": 2434.119542129338,
+    "total_median_ms": 2065.4458748176694,
+    "total_p95_ms": 2572.5797875784338,
+    "total_min_ms": 1607.8764577396214,
+    "total_max_ms": 2628.9280001074076,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "kimi-k2.6",
+    "n_tools": 100
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 2074.4173750281334,
+    "ttft_p95_ms": 2195.493737515062,
+    "ttft_min_ms": 1850.7448751479387,
+    "ttft_max_ms": 2208.9466666802764,
+    "total_median_ms": 2345.9046250209212,
+    "total_p95_ms": 2596.2396247312427,
+    "total_min_ms": 2253.8724592886865,
+    "total_max_ms": 2624.054624699056,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "kimi-k2.6",
+    "n_tools": 200
+  },
+  {
+    "trials": 3,
+    "ttft_median_ms": 2953.866207972169,
+    "ttft_p95_ms": 3126.7719589173794,
+    "ttft_min_ms": 2440.7394169829786,
+    "ttft_max_ms": 3145.9837090224028,
+    "total_median_ms": 3266.4410420693457,
+    "total_p95_ms": 3638.564642658457,
+    "total_min_ms": 2966.8034580536187,
+    "total_max_ms": 3679.9117093905807,
+    "relevant_tool_rate": 1.0,
+    "any_tool_rate": 1.0,
+    "response_start_rate": 1.0,
+    "errors": [],
+    "tool_call_names": [
+      "get_weather"
+    ],
+    "finish_reasons": [
+      "tool_calls"
+    ],
+    "model": "kimi-k2.6",
+    "n_tools": 500
+  }
+]

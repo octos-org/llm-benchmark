@@ -1,0 +1,30 @@
+# Sweep config for the 2026-05-28 kimi-k2.5 production-routing run.
+#
+# Motivation: live mini3 soak (session slides-1780013669236-8w2ime) hit a
+# 5-iteration loop where the runtime warning fired:
+#   "high tool count may cause empty responses with some models; tools=44"
+# We need to know whether kimi-k2.5 — as routed in production via
+# autodl.art — actually degrades at 44+ tools, or whether the warning was
+# noise and the degradation came from a different variable (long context,
+# wisemodel proxy buffering, etc.).
+#
+# N values are chosen to bracket 44 so we get a clear before/after signal
+# around the production tool count. We skip N=1000 to keep spend bounded
+# on the relay endpoint.
+#
+# Trials: 3 per (model, N).
+# Spend cap: $5 hard (autodl pricing is unfamiliar; cap small).
+defaults:
+  timeout: 120.0
+  relevant_position: first
+
+runs:
+  - provider: autodl
+    model: kimi-k2.5
+    n: [10, 30, 44, 50, 100, 200, 500]
+    trials: 3
+
+  - provider: autodl
+    model: kimi-k2.6
+    n: [10, 30, 44, 50, 100, 200, 500]
+    trials: 3

@@ -377,6 +377,36 @@ def make_provider(provider: str) -> ProviderConfig:
                 "Content-Type": "application/json",
             },
         )
+    if provider == "autodl":
+        # Production routing for moonshot/kimi-k2.5 on the octos dspfac fleet.
+        # The endpoint speaks OpenAI protocol but is operated by autodl.art /
+        # wisemodel as a commercial relay in front of Moonshot. Behaviour
+        # diverges from api.moonshot.ai direct (different rate limit, different
+        # streaming buffering); this provider entry exists to measure the
+        # production regime, not the model in isolation.
+        key = _require_env("AUTODL_API_KEY")
+        return ProviderConfig(
+            name="autodl",
+            url="https://www.autodl.art/api/v1/chat/completions",
+            protocol="openai",
+            headers_fn=lambda _model: {
+                "Authorization": f"Bearer {key}",
+                "Content-Type": "application/json",
+            },
+        )
+    if provider == "moonshot":
+        # Moonshot direct (api.moonshot.ai). Lets us separate "model itself" from
+        # "production relay (autodl) behaviour" when both keys are available.
+        key = _require_env("MOONSHOT_API_KEY")
+        return ProviderConfig(
+            name="moonshot",
+            url="https://api.moonshot.ai/v1/chat/completions",
+            protocol="openai",
+            headers_fn=lambda _model: {
+                "Authorization": f"Bearer {key}",
+                "Content-Type": "application/json",
+            },
+        )
     if provider == "zai":
         key = _require_env("ZAI_API_KEY")
         return ProviderConfig(

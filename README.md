@@ -142,6 +142,59 @@ happy path.
 Total estimated spend: **$8.37 / $10.00 cap** (DeepSeek Flash $0.03 +
 DeepSeek Pro $0.20 + Sonnet 4.6 $1.48 + Opus 4.7 $6.65).
 
+## Results: 2026-05-28 — Kimi via autodl/wisemodel relay
+
+This run was provoked by a live production incident on the octos fleet
+(`mini3`): a long-running multi-turn session hit a loop where the LLM called
+the same tool 5 times with identical args before the runtime broke it. The
+runtime emitted a generic warning at the time —
+`high tool count may cause empty responses with some models; tools=44` —
+and that warning got attributed as the root cause. This run measures
+whether the production-routed kimi models actually degrade at the tool
+counts in question (10 → 500, bracketing the observed 44), routed through
+the same path mini3 uses (`autodl.art` / wisemodel relay in front of
+Moonshot).
+
+| Model | N=10 | N=30 | **N=44** | N=50 | N=100 | N=200 | N=500 |
+|---|---|---|---|---|---|---|---|
+| `kimi-k2.5` | 1321 / 1522 ms<br>rel=100% | 1331 / 1614 ms<br>rel=100% | **1572 / 1970 ms<br>rel=100%** | 1543 / 1930 ms<br>rel=100% | 1547 / 1897 ms<br>rel=100% | 2065 / 2329 ms<br>rel=100% | 2752 / 3476 ms<br>rel=100% |
+| `kimi-k2.6` | 1216 / 1424 ms<br>rel=100% | 1361 / 1711 ms<br>rel=100% | **1566 / 1905 ms<br>rel=100%** | 1693 / 2218 ms<br>rel=100% | 1592 / 2065 ms<br>rel=100% | 2074 / 2346 ms<br>rel=100% | 2954 / 3266 ms<br>rel=100% |
+
+Trial-level CSV at [`results/2026-05-28/kimi-all.csv`](results/2026-05-28/kimi-all.csv).
+JSONL + per-cell summaries in `results/2026-05-28/`.
+
+### Headline insight
+
+**Tool count was not the cause.** Both production-routed kimi models hit
+100% relevant-tool selection at every N up to 500, with median total
+latency under 3.5s even at N=500 (~23k input tokens). The exact N=44
+measurement is clean (rel=100%, total ~2s). The runtime warning was a
+generic heuristic; this benchmark refutes it for the regime that
+matters.
+
+What this **does not** measure:
+
+- Multi-turn behaviour (the production incident had `messages=139`,
+  `input_tokens=53k`, conversational history of repeated tool calls and
+  results). This benchmark is single-turn.
+- Cumulative tool-result feedback (the failing turn had already seen
+  the same tool's output earlier in history — the degradation may come
+  from the prompt-shape of repeated stale evidence, not from the tool
+  catalog).
+- autodl/wisemodel proxy buffering at very long context. The largest
+  context measured here is ~23k input tokens at N=500; the production
+  failure was at ~53k input tokens.
+
+If the loop recurs, the next experiment to add to this repo is a
+multi-turn mode that replays the failing conversation shape, not more
+N-padding on single-turn requests. Tool count is not the variable.
+
+### Cost
+
+Total estimated spend on this run: **$0.00** (autodl's own usage frame
+returns no per-trial cost; spend recorded as zero by `bench.py`'s
+estimator).
+
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE).
