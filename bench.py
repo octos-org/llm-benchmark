@@ -362,7 +362,7 @@ def main() -> int:
     parser.add_argument(
         "--provider",
         default="openrouter",
-        choices=["openrouter", "deepseek", "anthropic", "zhipu", "zai"],
+        choices=["openrouter", "deepseek", "anthropic", "zhipu", "zai", "autodl", "moonshot"],
     )
     parser.add_argument("--model", action="append", default=None,
                         help="Pass multiple times for multiple models.")
